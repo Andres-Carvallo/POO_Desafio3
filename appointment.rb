@@ -18,12 +18,9 @@ class MonthlyAppointment < Appointment
         @day = day
     end
     def occurs_on?(day)
-        if @day == day
-            puts true 
-        else 
-            puts false
-        end
+       puts @day == day
     end
+
     def to_s
         puts "Reunión mensual en #{@location} sobre #{@prupose} el día #{@day} a la(s) #{@hour}:#{@min}."
     end
