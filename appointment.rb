@@ -21,7 +21,7 @@ class MonthlyAppointment < Appointment
        puts @day == day
     end
 
-    def to_s ()
+    def to_s
         puts "Reunión mensual en #{@location} sobre #{@prupose} el día #{@day} a la(s) #{@hour}:#{@min}."
     end
 end
@@ -30,7 +30,7 @@ class DailyAppointment < Appointment
     def occurs_on?(hour, min)
         puts @hour == hour && @min == min
     end
-    def to_s ()
+    def to_s
         puts "Reunión diaria en #{@location} sobre #{@prupose} a la(s) #{@hour}:#{@min}."
     end
 end
@@ -45,7 +45,7 @@ class OneTimeAppointment < Appointment
     def occurs_on?(day, month, year)
         puts @day == day && @month == month && @year == year
     end
-    def to_s ()
+    def to_s
         puts "Reunión única en #{@location} sobre #{@prupose} el #{@day}/#{@month}/#{@yeat} la(s) #{@hour}:#{@min}." 
     end
 end
