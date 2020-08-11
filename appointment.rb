@@ -38,10 +38,6 @@ end
 class OneTimeAppointment < Appointment
     attr_accessor :day, :month, :year
     def initialize (location, prupose, hour, min, day, month, year)
-        @location = location
-        @prupose = propuse
-        @hour = hour
-        @min = min
         @day = day
         @month = month
         @year = year
@@ -56,9 +52,9 @@ end
     
 
 
-puts OneTimeAppointment.new('Desafío Latam', ' Trabajo', 14,30,4,6,2019)
+puts OneTimeAppointment.new('Desafío Latam', ' Trabajo', 14,30,4,6,2019).to_s
 puts DailyAppointment.new('Desafío Latam', ' Educación', 8,15)
-puts MonthlyAppointment.new('NASA', 'Aliens', 8, 15, 23)
+puts MonthlyAppointment.new('NASA', 'Aliens', 8, 15, 23).to_s
 
 
 ap3 = MonthlyAppointment.new('Desafío Latam', ' Trabajo', 14,30,6)
