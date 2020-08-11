@@ -21,20 +21,16 @@ class MonthlyAppointment < Appointment
        puts @day == day
     end
 
-    def to_s
+    def to_s ()
         puts "Reunión mensual en #{@location} sobre #{@prupose} el día #{@day} a la(s) #{@hour}:#{@min}."
     end
 end
 
 class DailyAppointment < Appointment
     def occurs_on?(hour, min)
-        if @hour == hour && @min == min
-            puts true 
-        else 
-            puts false
-        end
+        puts @hour == hour && @min == min
     end
-    def to_s
+    def to_s ()
         puts "Reunión diaria en #{@location} sobre #{@prupose} a la(s) #{@hour}:#{@min}."
     end
 end
@@ -51,13 +47,9 @@ class OneTimeAppointment < Appointment
         @year = year
     end
     def occurs_on?(day, month, year)
-        if @day == day && @month == month && @year == year
-            puts true 
-        else 
-            puts false
-        end
+        puts @day == day && @month == month && @year == year
     end
-    def to_s 
+    def to_s ()
         puts "Reunión única en #{@location} sobre #{@prupose} el #{@day}/#{@month}/#{@yeat} la(s) #{@hour}:#{@min}." 
     end
 end
@@ -70,7 +62,7 @@ puts MonthlyAppointment.new('NASA', 'Aliens', 8, 15, 23)
 
 
 ap3 = MonthlyAppointment.new('Desafío Latam', ' Trabajo', 14,30,6)
-ap3.occurs_on?(7)
+ap3.occurs_on?(6)
 
 ap2 = DailyAppointment.new('Desafío Latam', ' Trabajo', 14,30)
 ap2.occurs_on?(14,30)
